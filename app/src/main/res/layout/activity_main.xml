@@ -33,5 +33,29 @@
         android:layout_height="wrap_content"
         android:id="@+id/edit_input" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show google"
+        android:id="@+id/btn_google" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dial"
+        android:id="@+id/btn_dial" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="toast"
+        android:id="@+id/btn_toast" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other"
+        android:id="@+id/btn_other" />
+
 
 </LinearLayout>
