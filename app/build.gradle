@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+// 환경 설정 정보 저징
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.tacadem.helloandroid"
+        minSdkVersion 10
+        // 런타임 퍼미션을 적용 안할경우 --> targetSdkVersion 22 이하로 하면 된다, default는 가장 최신 버젼으로 한다
+        // targetSdkVersion 에서의 레벨로 동작한다
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.annimon:stream:1.0.8'
+    compile 'com.android.support:design:23.2.1'
+
+    compile 'com.android.support:support-v4:23.2.1'
+}
